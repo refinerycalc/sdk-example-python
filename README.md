@@ -10,7 +10,8 @@ class RefineryCalc:
         config = Configuration()
         config.api_key = os.environ["RefineryCalc_Api_Key"]
         config.host = os.environ["RefineryCalc_Api_Url"]
-        self.__apiClient = ApiClient(configuration=config, header_name="x-api-key", header_value=config.api_key)
+        self.__apiClient = ApiClient(configuration=config, 
+             header_name="x-api-key", header_value=config.api_key)
         self.api = SimulationsApi(self.__apiClient)
 ```
 `RefineryCalc_Api_Url` in production should be `https://api.refinerycalc.com`
