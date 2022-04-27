@@ -1,7 +1,9 @@
-#Refinery Calc SDK Examples
+# Refinery Calc SDK Examples
+
 This repository contains some examples on how to use the Refinery Calc Python SDK client which wraps the Refinery Calc API.
 
-###Initialization
+### Initialization
+
 ```python
 class RefineryCalc:
     def __init__(self):
@@ -13,7 +15,7 @@ class RefineryCalc:
 ```
 `RefineryCalc_Api_Url` in production should be `https://api.refinerycalc.com`
 
-###Create Simulation
+### Create Simulation
 to create a new simulation, you will need the list of refineries that will be used in that simulation. See the sample code below:
 ```python
     refs = [7, 8, 9, 10]
