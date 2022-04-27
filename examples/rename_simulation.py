@@ -1,0 +1,8 @@
+from python.refinerycalc.models.simulation_rename_request_model import SimulationRenameRequestModel
+from initialization import RefineryCalc
+
+if __name__ == "__main__":
+    client = RefineryCalc()
+    req = SimulationRenameRequestModel("my new name")
+    response = client.api.v1_simulations_id_rename_patch("10aef717-d138-4a01-b366-2afc8cdf077a", body=req)
+    print(response)
