@@ -16,7 +16,7 @@ class RefineryCalc:
 ###Create Simulation
 to create a new simulation, you will need the list of refineries that will be used in that simulation. See the sample code below:
 ```python
-refs = [7, 8, 9, 10]
+    refs = [7, 8, 9, 10]
     client = RefineryCalc()
     req = CreateSimulationRequest()
     req.refineries = refs
