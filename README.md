@@ -18,16 +18,17 @@ class RefineryCalc:
 
 ### Create Simulation
 to create a new simulation, you will need the list of refineries that will be used in that simulation. See the sample code below:
+
 ```python
     refs = [7, 8, 9, 10]
-    client = RefineryCalc()
-    req = CreateSimulationRequest()
-    req.refineries = refs
-    # 0 is default datasource and 1 for IIR
-    req.data_source = 0
-    req.name = "my new simulation"
-    req.is_time_series = False
-    response = client.api.v1_simulations_post(body=req)
-    if response.success:
-        print(response.simulation_id)
+client = RefineryCalc()
+req = CreateSimulationRequest()
+req.refineries = refs
+# 0 is default datasource and 1 for IIR
+req.data_source = 0
+req.name = "my new simulation"
+req.is_time_series = False
+response = client.simulations.v1_simulations_post(body=req)
+if response.success:
+    print(response.simulation_id)
 ```

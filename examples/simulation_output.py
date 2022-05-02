@@ -13,7 +13,7 @@ def print_output(name, output_type):
 if __name__ == "__main__":
     client = RefineryCalc()
     simulation_id = "10aef717-d138-4a01-b366-2afc8cdf077a"
-    response = client.api.v1_simulations_id_output_get(simulation_id)
+    response = client.simulations.v1_simulations_id_output_get(simulation_id)
 
     for refinery in response.refineries:
         print("-----------------------------------")
