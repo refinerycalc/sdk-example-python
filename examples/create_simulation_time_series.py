@@ -75,7 +75,7 @@ def get_product_prices(days: int):
     return [price for i in range(days)]
 
 
-def get_crude_by_refinery_id(refinery_id: int, days: int):
+def get_crude_by_refinery_id(refinery_id: int, days: int) -> [TimeseriesCrudes]:
     # refinery_crude = client.refineries.v1_refineries_crude_id_get(refinery_id)
     crude = TimeseriesCrudes()
 
@@ -115,7 +115,8 @@ def get_crude_by_refinery_id(refinery_id: int, days: int):
     crude.crude4 = crude4
     crude.crude5 = crude5
 
-    return [[crude] for i in range(days)]
+    return [crude for i in range(days)]
+
 
 def create_time_series_simulation():
     # you can get refinery ids with a separate call.
@@ -128,18 +129,21 @@ def create_time_series_simulation():
     req.data_source = 0
     req.name = "time series simulation"
     req.is_time_series = True
-    num_of_days = 365
+    num_of_days = 1
     timeSeriesDays = []
     crude_list = get_crude_by_refinery_id(refineryId, num_of_days)
     run_modes = [0 for i in range(num_of_days)]
+    rate_percentages = [0.8 for i in range(num_of_days)]
     product_prices = get_product_prices(num_of_days)
     for i in range(num_of_days):
         day = TimeSeriesDay()
         advancedOptions = TimeseriesAdvancedOptions()
         advancedOptions.purchase_vgo = 6
         day.advanced_options = advancedOptions
-        day.crudes = crude_list
-        day.product_prices = product_prices
+        day.crudes = crude_list[i]
+        day.product_prices = product_prices[i]
+        day.run_mode = run_modes[i]
+        day.refinery_rate_percentage = rate_percentages[i]
         timeSeriesDays.append(day)
     req.time_series_days = timeSeriesDays
     response = client.simulations.v1_simulations_post(body=req)
