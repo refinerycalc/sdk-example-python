@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestCrudePrice(unittest.TestCase):
-    """CrudePrice unit examples stubs"""
+    """CrudePrice unit test stubs"""
 
     def setUp(self):
         pass

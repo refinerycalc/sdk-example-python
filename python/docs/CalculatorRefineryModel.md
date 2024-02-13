@@ -33,8 +33,10 @@ Name | Type | Description | Notes
 **heavy_crudes** | [**list[CrudeModel]**](CrudeModel.md) |  | [optional] 
 **product_prices** | [**list[ProductPriceModel]**](ProductPriceModel.md) |  | [optional] 
 **end_points** | [**list[EndPointModel]**](EndPointModel.md) |  | [optional] 
+**user_prices** | [**list[UserPrices]**](UserPrices.md) |  | [optional] 
 **is_template** | **bool** |  | [optional] 
 **outputs** | [**list[CalculatorRefineryOutputModel]**](CalculatorRefineryOutputModel.md) |  | [optional] 
+**is_user_price_data_missing** | **bool** |  | [optional] 
 **product_price_unit_type** | **str** |  | [optional] 
 **apply_all_crude_composition** | **bool** |  | [optional] 
 **use_design_mode** | **bool** |  | [optional] 
@@ -50,6 +52,8 @@ Name | Type | Description | Notes
 **purchase_vgo** | **float** |  | [optional] 
 **message** | **str** |  | [optional] 
 **success** | **bool** |  | [optional] 
+**user_price_list_id** | **int** |  | [optional] 
+**user_price_list_date** | **datetime** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

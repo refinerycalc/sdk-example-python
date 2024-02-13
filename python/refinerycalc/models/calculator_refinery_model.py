@@ -58,8 +58,10 @@ class CalculatorRefineryModel(object):
         'heavy_crudes': 'list[CrudeModel]',
         'product_prices': 'list[ProductPriceModel]',
         'end_points': 'list[EndPointModel]',
+        'user_prices': 'list[UserPrices]',
         'is_template': 'bool',
         'outputs': 'list[CalculatorRefineryOutputModel]',
+        'is_user_price_data_missing': 'bool',
         'product_price_unit_type': 'str',
         'apply_all_crude_composition': 'bool',
         'use_design_mode': 'bool',
@@ -74,7 +76,9 @@ class CalculatorRefineryModel(object):
         'grey_hydrogen_price': 'float',
         'purchase_vgo': 'float',
         'message': 'str',
-        'success': 'bool'
+        'success': 'bool',
+        'user_price_list_id': 'int',
+        'user_price_list_date': 'datetime'
     }
 
     attribute_map = {
@@ -108,8 +112,10 @@ class CalculatorRefineryModel(object):
         'heavy_crudes': 'heavyCrudes',
         'product_prices': 'productPrices',
         'end_points': 'endPoints',
+        'user_prices': 'userPrices',
         'is_template': 'isTemplate',
         'outputs': 'outputs',
+        'is_user_price_data_missing': 'isUserPriceDataMissing',
         'product_price_unit_type': 'productPriceUnitType',
         'apply_all_crude_composition': 'applyAllCrudeComposition',
         'use_design_mode': 'useDesignMode',
@@ -124,10 +130,12 @@ class CalculatorRefineryModel(object):
         'grey_hydrogen_price': 'greyHydrogenPrice',
         'purchase_vgo': 'purchaseVgo',
         'message': 'message',
-        'success': 'success'
+        'success': 'success',
+        'user_price_list_id': 'userPriceListId',
+        'user_price_list_date': 'userPriceListDate'
     }
 
-    def __init__(self, crudes_graph=None, constraints_graph=None, hydrogen_graph=None, crude_composition_graph=None, products_graph=None, id=None, name=None, guid=None, notes=None, is_engine_mode=None, is_time_series=None, has_time_series_file=None, crude_mode=None, end_point_mode=None, intermediate_product=None, kero_mode=None, kero_fix_volume=None, is_user_default=None, excel_output=None, pdf_output=None, calculator=None, refinery=None, units=None, crudes=None, all_crudes=None, light_crudes=None, intermediate_crudes=None, heavy_crudes=None, product_prices=None, end_points=None, is_template=None, outputs=None, product_price_unit_type=None, apply_all_crude_composition=None, use_design_mode=None, is_iir_refinery=None, carbon_penalty=None, reid_vapor_pressure=None, blue_hydrogen_percent=None, blue_hydrogen_price=None, green_hydrogen_percent=None, green_hydrogen_price=None, grey_hydrogen_percent=None, grey_hydrogen_price=None, purchase_vgo=None, message=None, success=None):  # noqa: E501
+    def __init__(self, crudes_graph=None, constraints_graph=None, hydrogen_graph=None, crude_composition_graph=None, products_graph=None, id=None, name=None, guid=None, notes=None, is_engine_mode=None, is_time_series=None, has_time_series_file=None, crude_mode=None, end_point_mode=None, intermediate_product=None, kero_mode=None, kero_fix_volume=None, is_user_default=None, excel_output=None, pdf_output=None, calculator=None, refinery=None, units=None, crudes=None, all_crudes=None, light_crudes=None, intermediate_crudes=None, heavy_crudes=None, product_prices=None, end_points=None, user_prices=None, is_template=None, outputs=None, is_user_price_data_missing=None, product_price_unit_type=None, apply_all_crude_composition=None, use_design_mode=None, is_iir_refinery=None, carbon_penalty=None, reid_vapor_pressure=None, blue_hydrogen_percent=None, blue_hydrogen_price=None, green_hydrogen_percent=None, green_hydrogen_price=None, grey_hydrogen_percent=None, grey_hydrogen_price=None, purchase_vgo=None, message=None, success=None, user_price_list_id=None, user_price_list_date=None):  # noqa: E501
         """CalculatorRefineryModel - a model defined in Swagger"""  # noqa: E501
         self._crudes_graph = None
         self._constraints_graph = None
@@ -159,8 +167,10 @@ class CalculatorRefineryModel(object):
         self._heavy_crudes = None
         self._product_prices = None
         self._end_points = None
+        self._user_prices = None
         self._is_template = None
         self._outputs = None
+        self._is_user_price_data_missing = None
         self._product_price_unit_type = None
         self._apply_all_crude_composition = None
         self._use_design_mode = None
@@ -176,6 +186,8 @@ class CalculatorRefineryModel(object):
         self._purchase_vgo = None
         self._message = None
         self._success = None
+        self._user_price_list_id = None
+        self._user_price_list_date = None
         self.discriminator = None
         if crudes_graph is not None:
             self.crudes_graph = crudes_graph
@@ -237,10 +249,14 @@ class CalculatorRefineryModel(object):
             self.product_prices = product_prices
         if end_points is not None:
             self.end_points = end_points
+        if user_prices is not None:
+            self.user_prices = user_prices
         if is_template is not None:
             self.is_template = is_template
         if outputs is not None:
             self.outputs = outputs
+        if is_user_price_data_missing is not None:
+            self.is_user_price_data_missing = is_user_price_data_missing
         if product_price_unit_type is not None:
             self.product_price_unit_type = product_price_unit_type
         if apply_all_crude_composition is not None:
@@ -271,6 +287,10 @@ class CalculatorRefineryModel(object):
             self.message = message
         if success is not None:
             self.success = success
+        if user_price_list_id is not None:
+            self.user_price_list_id = user_price_list_id
+        if user_price_list_date is not None:
+            self.user_price_list_date = user_price_list_date
 
     @property
     def crudes_graph(self):
@@ -903,6 +923,27 @@ class CalculatorRefineryModel(object):
         self._end_points = end_points
 
     @property
+    def user_prices(self):
+        """Gets the user_prices of this CalculatorRefineryModel.  # noqa: E501
+
+
+        :return: The user_prices of this CalculatorRefineryModel.  # noqa: E501
+        :rtype: list[UserPrices]
+        """
+        return self._user_prices
+
+    @user_prices.setter
+    def user_prices(self, user_prices):
+        """Sets the user_prices of this CalculatorRefineryModel.
+
+
+        :param user_prices: The user_prices of this CalculatorRefineryModel.  # noqa: E501
+        :type: list[UserPrices]
+        """
+
+        self._user_prices = user_prices
+
+    @property
     def is_template(self):
         """Gets the is_template of this CalculatorRefineryModel.  # noqa: E501
 
@@ -943,6 +984,27 @@ class CalculatorRefineryModel(object):
         """
 
         self._outputs = outputs
+
+    @property
+    def is_user_price_data_missing(self):
+        """Gets the is_user_price_data_missing of this CalculatorRefineryModel.  # noqa: E501
+
+
+        :return: The is_user_price_data_missing of this CalculatorRefineryModel.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_user_price_data_missing
+
+    @is_user_price_data_missing.setter
+    def is_user_price_data_missing(self, is_user_price_data_missing):
+        """Sets the is_user_price_data_missing of this CalculatorRefineryModel.
+
+
+        :param is_user_price_data_missing: The is_user_price_data_missing of this CalculatorRefineryModel.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_user_price_data_missing = is_user_price_data_missing
 
     @property
     def product_price_unit_type(self):
@@ -1258,6 +1320,48 @@ class CalculatorRefineryModel(object):
         """
 
         self._success = success
+
+    @property
+    def user_price_list_id(self):
+        """Gets the user_price_list_id of this CalculatorRefineryModel.  # noqa: E501
+
+
+        :return: The user_price_list_id of this CalculatorRefineryModel.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_price_list_id
+
+    @user_price_list_id.setter
+    def user_price_list_id(self, user_price_list_id):
+        """Sets the user_price_list_id of this CalculatorRefineryModel.
+
+
+        :param user_price_list_id: The user_price_list_id of this CalculatorRefineryModel.  # noqa: E501
+        :type: int
+        """
+
+        self._user_price_list_id = user_price_list_id
+
+    @property
+    def user_price_list_date(self):
+        """Gets the user_price_list_date of this CalculatorRefineryModel.  # noqa: E501
+
+
+        :return: The user_price_list_date of this CalculatorRefineryModel.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._user_price_list_date
+
+    @user_price_list_date.setter
+    def user_price_list_date(self, user_price_list_date):
+        """Sets the user_price_list_date of this CalculatorRefineryModel.
+
+
+        :param user_price_list_date: The user_price_list_date of this CalculatorRefineryModel.  # noqa: E501
+        :type: datetime
+        """
+
+        self._user_price_list_date = user_price_list_date
 
     def to_dict(self):
         """Returns the model properties as a dict"""

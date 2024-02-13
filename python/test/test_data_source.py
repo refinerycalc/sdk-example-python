@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestDataSource(unittest.TestCase):
-    """DataSource unit examples stubs"""
+    """DataSource unit test stubs"""
 
     def setUp(self):
         pass

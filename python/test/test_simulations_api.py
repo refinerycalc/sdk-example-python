@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestSimulationsApi(unittest.TestCase):
-    """SimulationsApi unit examples stubs"""
+    """SimulationsApi unit test stubs"""
 
     def setUp(self):
         self.api = SimulationsApi()  # noqa: E501
@@ -243,6 +243,13 @@ class TestSimulationsApi(unittest.TestCase):
         """
         pass
 
+    def test_v1_simulations_id_schedule_delete(self):
+        """Test case for v1_simulations_id_schedule_delete
+
+        Delete a simulation schedule.  # noqa: E501
+        """
+        pass
+
     def test_v1_simulations_id_schedule_post(self):
         """Test case for v1_simulations_id_schedule_post
 
@@ -254,6 +261,13 @@ class TestSimulationsApi(unittest.TestCase):
         """Test case for v1_simulations_post
 
         Create a new simulation from a given list of refineries  # noqa: E501
+        """
+        pass
+
+    def test_v1_simulations_schedules_get(self):
+        """Test case for v1_simulations_schedules_get
+
+        Retrieves list of the scheduled simulations.  # noqa: E501
         """
         pass
 

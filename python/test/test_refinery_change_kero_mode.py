@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestRefineryChangeKeroMode(unittest.TestCase):
-    """RefineryChangeKeroMode unit examples stubs"""
+    """RefineryChangeKeroMode unit test stubs"""
 
     def setUp(self):
         pass

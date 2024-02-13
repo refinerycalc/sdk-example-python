@@ -35,8 +35,10 @@ Method | HTTP request | Description
 [**v1_simulations_id_rename_patch**](SimulationsApi.md#v1_simulations_id_rename_patch) | **PATCH** /v1/simulations/{id}/rename | Rename an existing simulation
 [**v1_simulations_id_run_post**](SimulationsApi.md#v1_simulations_id_run_post) | **POST** /v1/simulations/{id}/run | Run a simulation by Id
 [**v1_simulations_id_run_status_get**](SimulationsApi.md#v1_simulations_id_run_status_get) | **GET** /v1/simulations/{id}/run/status | Get simulation run status
+[**v1_simulations_id_schedule_delete**](SimulationsApi.md#v1_simulations_id_schedule_delete) | **DELETE** /v1/simulations/{id}/schedule | Delete a simulation schedule.
 [**v1_simulations_id_schedule_post**](SimulationsApi.md#v1_simulations_id_schedule_post) | **POST** /v1/simulations/{id}/schedule | Schedule a simulation to run
 [**v1_simulations_post**](SimulationsApi.md#v1_simulations_post) | **POST** /v1/simulations | Create a new simulation from a given list of refineries
+[**v1_simulations_schedules_get**](SimulationsApi.md#v1_simulations_schedules_get) | **GET** /v1/simulations/schedules | Retrieves list of the scheduled simulations.
 [**v1_simulations_simulation_id_refineries_kero_mode_patch**](SimulationsApi.md#v1_simulations_simulation_id_refineries_kero_mode_patch) | **PATCH** /v1/simulations/{simulation_id}/refineries/kero/mode | Update refinery kero mode
 
 # **v1_simulations_get**
@@ -1507,6 +1509,52 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **v1_simulations_id_schedule_delete**
+> ApiResponse v1_simulations_id_schedule_delete(id)
+
+Delete a simulation schedule.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import refinerycalc
+from refinerycalc.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = refinerycalc.SimulationsApi()
+id = 'id_example' # str | The id of the Simulation
+
+try:
+    # Delete a simulation schedule.
+    api_response = api_instance.v1_simulations_id_schedule_delete(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SimulationsApi->v1_simulations_id_schedule_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The id of the Simulation | 
+
+### Return type
+
+[**ApiResponse**](ApiResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **v1_simulations_id_schedule_post**
 > ScheduleJobResponse v1_simulations_id_schedule_post(id, body=body)
 
@@ -1597,6 +1645,48 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **v1_simulations_schedules_get**
+> SimulationScheduleResponseModel v1_simulations_schedules_get()
+
+Retrieves list of the scheduled simulations.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import refinerycalc
+from refinerycalc.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = refinerycalc.SimulationsApi()
+
+try:
+    # Retrieves list of the scheduled simulations.
+    api_response = api_instance.v1_simulations_schedules_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SimulationsApi->v1_simulations_schedules_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**SimulationScheduleResponseModel**](SimulationScheduleResponseModel.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

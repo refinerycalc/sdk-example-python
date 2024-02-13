@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestAdvancedOptionType(unittest.TestCase):
-    """AdvancedOptionType unit examples stubs"""
+    """AdvancedOptionType unit test stubs"""
 
     def setUp(self):
         pass

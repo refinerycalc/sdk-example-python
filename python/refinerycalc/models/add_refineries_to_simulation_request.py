@@ -29,25 +29,20 @@ class AddRefineriesToSimulationRequest(object):
     """
     swagger_types = {
         'refinery_ids': 'list[int]',
-        'is_time_series': 'bool',
         'data_source': 'DataSource'
     }
 
     attribute_map = {
         'refinery_ids': 'refineryIds',
-        'is_time_series': 'isTimeSeries',
         'data_source': 'dataSource'
     }
 
-    def __init__(self, refinery_ids=None, is_time_series=None, data_source=None):  # noqa: E501
+    def __init__(self, refinery_ids=None, data_source=None):  # noqa: E501
         """AddRefineriesToSimulationRequest - a model defined in Swagger"""  # noqa: E501
         self._refinery_ids = None
-        self._is_time_series = None
         self._data_source = None
         self.discriminator = None
         self.refinery_ids = refinery_ids
-        if is_time_series is not None:
-            self.is_time_series = is_time_series
         if data_source is not None:
             self.data_source = data_source
 
@@ -73,27 +68,6 @@ class AddRefineriesToSimulationRequest(object):
             raise ValueError("Invalid value for `refinery_ids`, must not be `None`")  # noqa: E501
 
         self._refinery_ids = refinery_ids
-
-    @property
-    def is_time_series(self):
-        """Gets the is_time_series of this AddRefineriesToSimulationRequest.  # noqa: E501
-
-
-        :return: The is_time_series of this AddRefineriesToSimulationRequest.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_time_series
-
-    @is_time_series.setter
-    def is_time_series(self, is_time_series):
-        """Sets the is_time_series of this AddRefineriesToSimulationRequest.
-
-
-        :param is_time_series: The is_time_series of this AddRefineriesToSimulationRequest.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_time_series = is_time_series
 
     @property
     def data_source(self):

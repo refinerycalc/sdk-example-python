@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestOutputDetails(unittest.TestCase):
-    """OutputDetails unit examples stubs"""
+    """OutputDetails unit test stubs"""
 
     def setUp(self):
         pass

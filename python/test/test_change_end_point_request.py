@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestChangeEndPointRequest(unittest.TestCase):
-    """ChangeEndPointRequest unit examples stubs"""
+    """ChangeEndPointRequest unit test stubs"""
 
     def setUp(self):
         pass

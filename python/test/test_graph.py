@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestGraph(unittest.TestCase):
-    """Graph unit examples stubs"""
+    """Graph unit test stubs"""
 
     def setUp(self):
         pass

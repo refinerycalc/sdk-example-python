@@ -46,6 +46,7 @@ class OutputType(object):
     REFINERYLAYOUTSVG = "RefineryLayoutSVG"
     SUSTAINABILITY = "Sustainability"
     UNITBALANCE = "UnitBalance"
+    UNSPECIFIED = "Unspecified"
     """
     Attributes:
       swagger_types (dict): The key is attribute name

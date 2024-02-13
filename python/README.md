@@ -86,8 +86,8 @@ Class | Method | HTTP request | Description
 *ProductPricesApi* | [**v1_product_prices_region_id_get**](docs/ProductPricesApi.md#v1_product_prices_region_id_get) | **GET** /v1/product/prices/region/{id} | Get product price by region id
 *ProductPricesApi* | [**v1_product_prices_region_region_name_get**](docs/ProductPricesApi.md#v1_product_prices_region_region_name_get) | **GET** /v1/product/prices/region/{regionName} | Get product price by region
 *RefineriesApi* | [**v1_refineries_aggregates_get**](docs/RefineriesApi.md#v1_refineries_aggregates_get) | **GET** /v1/refineries/aggregates | Get Aggregated Refineries by datasource. user can also filter refineries by providing it&#x27;s name, region and country.
-*RefineriesApi* | [**v1_refineries_crude_id_get**](docs/RefineriesApi.md#v1_refineries_crude_id_get) | **GET** /v1/refineries/crude/{id} | Get refinery crude by using refineryCrude id.
 *RefineriesApi* | [**v1_refineries_get**](docs/RefineriesApi.md#v1_refineries_get) | **GET** /v1/refineries | Get all Refineries by datasource, user can also filter refineries by providing it&#x27;s name, region and country.
+*RefineriesApi* | [**v1_refineries_id_crudes_get**](docs/RefineriesApi.md#v1_refineries_id_crudes_get) | **GET** /v1/refineries/{id}/crudes | Get list of crudes for a particular refinery.
 *RefineriesApi* | [**v1_refineries_id_get**](docs/RefineriesApi.md#v1_refineries_id_get) | **GET** /v1/refineries/{id} | Get Refinery by Id.
 *RefineriesApi* | [**v1_refineries_id_units_get**](docs/RefineriesApi.md#v1_refineries_id_units_get) | **GET** /v1/refineries/{id}/units | Get all units of refinery id.
 *RefineriesApi* | [**v1_refineries_individual_get**](docs/RefineriesApi.md#v1_refineries_individual_get) | **GET** /v1/refineries/individual | Get Individual Refineries by datasource. user can also filter refineries by providing it&#x27;s name, region and country.
@@ -123,8 +123,10 @@ Class | Method | HTTP request | Description
 *SimulationsApi* | [**v1_simulations_id_rename_patch**](docs/SimulationsApi.md#v1_simulations_id_rename_patch) | **PATCH** /v1/simulations/{id}/rename | Rename an existing simulation
 *SimulationsApi* | [**v1_simulations_id_run_post**](docs/SimulationsApi.md#v1_simulations_id_run_post) | **POST** /v1/simulations/{id}/run | Run a simulation by Id
 *SimulationsApi* | [**v1_simulations_id_run_status_get**](docs/SimulationsApi.md#v1_simulations_id_run_status_get) | **GET** /v1/simulations/{id}/run/status | Get simulation run status
+*SimulationsApi* | [**v1_simulations_id_schedule_delete**](docs/SimulationsApi.md#v1_simulations_id_schedule_delete) | **DELETE** /v1/simulations/{id}/schedule | Delete a simulation schedule.
 *SimulationsApi* | [**v1_simulations_id_schedule_post**](docs/SimulationsApi.md#v1_simulations_id_schedule_post) | **POST** /v1/simulations/{id}/schedule | Schedule a simulation to run
 *SimulationsApi* | [**v1_simulations_post**](docs/SimulationsApi.md#v1_simulations_post) | **POST** /v1/simulations | Create a new simulation from a given list of refineries
+*SimulationsApi* | [**v1_simulations_schedules_get**](docs/SimulationsApi.md#v1_simulations_schedules_get) | **GET** /v1/simulations/schedules | Retrieves list of the scheduled simulations.
 *SimulationsApi* | [**v1_simulations_simulation_id_refineries_kero_mode_patch**](docs/SimulationsApi.md#v1_simulations_simulation_id_refineries_kero_mode_patch) | **PATCH** /v1/simulations/{simulation_id}/refineries/kero/mode | Update refinery kero mode
 
 ## Documentation For Models
@@ -153,6 +155,7 @@ Class | Method | HTTP request | Description
  - [EndPointMode](docs/EndPointMode.md)
  - [EndPointModel](docs/EndPointModel.md)
  - [EndPointResponse](docs/EndPointResponse.md)
+ - [FilterOperator](docs/FilterOperator.md)
  - [GetCalculatorRefineryCrudesResponse](docs/GetCalculatorRefineryCrudesResponse.md)
  - [GetRefineriesForSimulationResponse](docs/GetRefineriesForSimulationResponse.md)
  - [Graph](docs/Graph.md)
@@ -203,6 +206,9 @@ Class | Method | HTTP request | Description
  - [SimulationJobOptions](docs/SimulationJobOptions.md)
  - [SimulationRenameRequestModel](docs/SimulationRenameRequestModel.md)
  - [SimulationResponse](docs/SimulationResponse.md)
+ - [SimulationScheduleModel](docs/SimulationScheduleModel.md)
+ - [SimulationScheduleResponseModel](docs/SimulationScheduleResponseModel.md)
+ - [SimulationScheduleRunModel](docs/SimulationScheduleRunModel.md)
  - [SolverOutputType](docs/SolverOutputType.md)
  - [TimeSeriesDay](docs/TimeSeriesDay.md)
  - [TimeSpan](docs/TimeSpan.md)
@@ -217,6 +223,7 @@ Class | Method | HTTP request | Description
  - [UnitToggleShutdownStatusResponseModel](docs/UnitToggleShutdownStatusResponseModel.md)
  - [UpdateSimRefineryCrudeAllocationRequest](docs/UpdateSimRefineryCrudeAllocationRequest.md)
  - [UpdateSimRefineryCrudePricesRequest](docs/UpdateSimRefineryCrudePricesRequest.md)
+ - [UserPrices](docs/UserPrices.md)
 
 ## Documentation For Authorization
 

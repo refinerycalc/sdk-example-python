@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestEndPointsApi(unittest.TestCase):
-    """EndPointsApi unit examples stubs"""
+    """EndPointsApi unit test stubs"""
 
     def setUp(self):
         self.api = EndPointsApi()  # noqa: E501

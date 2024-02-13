@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestKeroOptimizationMode(unittest.TestCase):
-    """KeroOptimizationMode unit examples stubs"""
+    """KeroOptimizationMode unit test stubs"""
 
     def setUp(self):
         pass

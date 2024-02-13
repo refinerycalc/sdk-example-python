@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestIScheduledJob(unittest.TestCase):
-    """IScheduledJob unit examples stubs"""
+    """IScheduledJob unit test stubs"""
 
     def setUp(self):
         pass

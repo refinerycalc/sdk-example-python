@@ -57,7 +57,11 @@ class CalculatorModel(object):
         'is_time_series': 'bool',
         'time_series_input_file': 'str',
         'solver_machine_name': 'str',
-        'output_type': 'SolverOutputType'
+        'output_type': 'SolverOutputType',
+        'modified_on_humanize': 'str',
+        'duration_humanized': 'str',
+        'modified_on_ticks': 'int',
+        'calculator_id': 'int'
     }
 
     attribute_map = {
@@ -90,10 +94,14 @@ class CalculatorModel(object):
         'is_time_series': 'isTimeSeries',
         'time_series_input_file': 'timeSeriesInputFile',
         'solver_machine_name': 'solverMachineName',
-        'output_type': 'outputType'
+        'output_type': 'outputType',
+        'modified_on_humanize': 'modifiedOnHumanize',
+        'duration_humanized': 'durationHumanized',
+        'modified_on_ticks': 'modifiedOnTicks',
+        'calculator_id': 'calculatorId'
     }
 
-    def __init__(self, notes=None, id=None, is_processed=None, is_deleted=None, percent_solved=None, notify_when_solved=None, is_solved=None, solve_status=None, start_time=None, stop_time=None, pdf_output=None, excel_output=None, notification_email=None, timed_out=None, data_source=None, refineries=None, is_solving=None, is_cancelled=None, is_engine_mode=None, duration=None, refinery_count=None, created_on=None, name=None, solve_time_remaining=None, modified_on=None, has_scheduled_runs=None, is_time_series=None, time_series_input_file=None, solver_machine_name=None, output_type=None):  # noqa: E501
+    def __init__(self, notes=None, id=None, is_processed=None, is_deleted=None, percent_solved=None, notify_when_solved=None, is_solved=None, solve_status=None, start_time=None, stop_time=None, pdf_output=None, excel_output=None, notification_email=None, timed_out=None, data_source=None, refineries=None, is_solving=None, is_cancelled=None, is_engine_mode=None, duration=None, refinery_count=None, created_on=None, name=None, solve_time_remaining=None, modified_on=None, has_scheduled_runs=None, is_time_series=None, time_series_input_file=None, solver_machine_name=None, output_type=None, modified_on_humanize=None, duration_humanized=None, modified_on_ticks=None, calculator_id=None):  # noqa: E501
         """CalculatorModel - a model defined in Swagger"""  # noqa: E501
         self._notes = None
         self._id = None
@@ -125,6 +133,10 @@ class CalculatorModel(object):
         self._time_series_input_file = None
         self._solver_machine_name = None
         self._output_type = None
+        self._modified_on_humanize = None
+        self._duration_humanized = None
+        self._modified_on_ticks = None
+        self._calculator_id = None
         self.discriminator = None
         if notes is not None:
             self.notes = notes
@@ -186,6 +198,14 @@ class CalculatorModel(object):
             self.solver_machine_name = solver_machine_name
         if output_type is not None:
             self.output_type = output_type
+        if modified_on_humanize is not None:
+            self.modified_on_humanize = modified_on_humanize
+        if duration_humanized is not None:
+            self.duration_humanized = duration_humanized
+        if modified_on_ticks is not None:
+            self.modified_on_ticks = modified_on_ticks
+        if calculator_id is not None:
+            self.calculator_id = calculator_id
 
     @property
     def notes(self):
@@ -816,6 +836,90 @@ class CalculatorModel(object):
         """
 
         self._output_type = output_type
+
+    @property
+    def modified_on_humanize(self):
+        """Gets the modified_on_humanize of this CalculatorModel.  # noqa: E501
+
+
+        :return: The modified_on_humanize of this CalculatorModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._modified_on_humanize
+
+    @modified_on_humanize.setter
+    def modified_on_humanize(self, modified_on_humanize):
+        """Sets the modified_on_humanize of this CalculatorModel.
+
+
+        :param modified_on_humanize: The modified_on_humanize of this CalculatorModel.  # noqa: E501
+        :type: str
+        """
+
+        self._modified_on_humanize = modified_on_humanize
+
+    @property
+    def duration_humanized(self):
+        """Gets the duration_humanized of this CalculatorModel.  # noqa: E501
+
+
+        :return: The duration_humanized of this CalculatorModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._duration_humanized
+
+    @duration_humanized.setter
+    def duration_humanized(self, duration_humanized):
+        """Sets the duration_humanized of this CalculatorModel.
+
+
+        :param duration_humanized: The duration_humanized of this CalculatorModel.  # noqa: E501
+        :type: str
+        """
+
+        self._duration_humanized = duration_humanized
+
+    @property
+    def modified_on_ticks(self):
+        """Gets the modified_on_ticks of this CalculatorModel.  # noqa: E501
+
+
+        :return: The modified_on_ticks of this CalculatorModel.  # noqa: E501
+        :rtype: int
+        """
+        return self._modified_on_ticks
+
+    @modified_on_ticks.setter
+    def modified_on_ticks(self, modified_on_ticks):
+        """Sets the modified_on_ticks of this CalculatorModel.
+
+
+        :param modified_on_ticks: The modified_on_ticks of this CalculatorModel.  # noqa: E501
+        :type: int
+        """
+
+        self._modified_on_ticks = modified_on_ticks
+
+    @property
+    def calculator_id(self):
+        """Gets the calculator_id of this CalculatorModel.  # noqa: E501
+
+
+        :return: The calculator_id of this CalculatorModel.  # noqa: E501
+        :rtype: int
+        """
+        return self._calculator_id
+
+    @calculator_id.setter
+    def calculator_id(self, calculator_id):
+        """Sets the calculator_id of this CalculatorModel.
+
+
+        :param calculator_id: The calculator_id of this CalculatorModel.  # noqa: E501
+        :type: int
+        """
+
+        self._calculator_id = calculator_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,8 +33,8 @@ class RefineryOutputTypeModel(object):
         'percent_solved': 'float',
         'start_time': 'datetime',
         'stop_time': 'datetime',
-        'duration': 'int',
-        'outputs': 'OutputTypes'
+        'duration_in_seconds': 'int',
+        'output': 'OutputTypes'
     }
 
     attribute_map = {
@@ -43,19 +43,19 @@ class RefineryOutputTypeModel(object):
         'percent_solved': 'percentSolved',
         'start_time': 'startTime',
         'stop_time': 'stopTime',
-        'duration': 'duration',
-        'outputs': 'outputs'
+        'duration_in_seconds': 'durationInSeconds',
+        'output': 'output'
     }
 
-    def __init__(self, refinery_id=None, refinery_name=None, percent_solved=None, start_time=None, stop_time=None, duration=None, outputs=None):  # noqa: E501
+    def __init__(self, refinery_id=None, refinery_name=None, percent_solved=None, start_time=None, stop_time=None, duration_in_seconds=None, output=None):  # noqa: E501
         """RefineryOutputTypeModel - a model defined in Swagger"""  # noqa: E501
         self._refinery_id = None
         self._refinery_name = None
         self._percent_solved = None
         self._start_time = None
         self._stop_time = None
-        self._duration = None
-        self._outputs = None
+        self._duration_in_seconds = None
+        self._output = None
         self.discriminator = None
         if refinery_id is not None:
             self.refinery_id = refinery_id
@@ -67,10 +67,10 @@ class RefineryOutputTypeModel(object):
             self.start_time = start_time
         if stop_time is not None:
             self.stop_time = stop_time
-        if duration is not None:
-            self.duration = duration
-        if outputs is not None:
-            self.outputs = outputs
+        if duration_in_seconds is not None:
+            self.duration_in_seconds = duration_in_seconds
+        if output is not None:
+            self.output = output
 
     @property
     def refinery_id(self):
@@ -178,46 +178,46 @@ class RefineryOutputTypeModel(object):
         self._stop_time = stop_time
 
     @property
-    def duration(self):
-        """Gets the duration of this RefineryOutputTypeModel.  # noqa: E501
+    def duration_in_seconds(self):
+        """Gets the duration_in_seconds of this RefineryOutputTypeModel.  # noqa: E501
 
 
-        :return: The duration of this RefineryOutputTypeModel.  # noqa: E501
+        :return: The duration_in_seconds of this RefineryOutputTypeModel.  # noqa: E501
         :rtype: int
         """
-        return self._duration
+        return self._duration_in_seconds
 
-    @duration.setter
-    def duration(self, duration):
-        """Sets the duration of this RefineryOutputTypeModel.
+    @duration_in_seconds.setter
+    def duration_in_seconds(self, duration_in_seconds):
+        """Sets the duration_in_seconds of this RefineryOutputTypeModel.
 
 
-        :param duration: The duration of this RefineryOutputTypeModel.  # noqa: E501
+        :param duration_in_seconds: The duration_in_seconds of this RefineryOutputTypeModel.  # noqa: E501
         :type: int
         """
 
-        self._duration = duration
+        self._duration_in_seconds = duration_in_seconds
 
     @property
-    def outputs(self):
-        """Gets the outputs of this RefineryOutputTypeModel.  # noqa: E501
+    def output(self):
+        """Gets the output of this RefineryOutputTypeModel.  # noqa: E501
 
 
-        :return: The outputs of this RefineryOutputTypeModel.  # noqa: E501
+        :return: The output of this RefineryOutputTypeModel.  # noqa: E501
         :rtype: OutputTypes
         """
-        return self._outputs
+        return self._output
 
-    @outputs.setter
-    def outputs(self, outputs):
-        """Sets the outputs of this RefineryOutputTypeModel.
+    @output.setter
+    def output(self, output):
+        """Sets the output of this RefineryOutputTypeModel.
 
 
-        :param outputs: The outputs of this RefineryOutputTypeModel.  # noqa: E501
+        :param output: The output of this RefineryOutputTypeModel.  # noqa: E501
         :type: OutputTypes
         """
 
-        self._outputs = outputs
+        self._output = output
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestProductPricesApi(unittest.TestCase):
-    """ProductPricesApi unit examples stubs"""
+    """ProductPricesApi unit test stubs"""
 
     def setUp(self):
         self.api = ProductPricesApi()  # noqa: E501

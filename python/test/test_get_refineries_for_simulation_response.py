@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestGetRefineriesForSimulationResponse(unittest.TestCase):
-    """GetRefineriesForSimulationResponse unit examples stubs"""
+    """GetRefineriesForSimulationResponse unit test stubs"""
 
     def setUp(self):
         pass

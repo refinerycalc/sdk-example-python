@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestRunMode(unittest.TestCase):
-    """RunMode unit examples stubs"""
+    """RunMode unit test stubs"""
 
     def setUp(self):
         pass

@@ -33,6 +33,10 @@ Name | Type | Description | Notes
 **time_series_input_file** | **str** |  | [optional] 
 **solver_machine_name** | **str** |  | [optional] 
 **output_type** | [**SolverOutputType**](SolverOutputType.md) |  | [optional] 
+**modified_on_humanize** | **str** |  | [optional] 
+**duration_humanized** | **str** |  | [optional] 
+**modified_on_ticks** | **int** |  | [optional] 
+**calculator_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

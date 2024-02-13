@@ -312,7 +312,7 @@ class ProductPricesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str region_name: (required)
+        :param str region_name: Region name (required)
         :return: ProductPriceModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -333,7 +333,7 @@ class ProductPricesApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str region_name: (required)
+        :param str region_name: Region name (required)
         :return: ProductPriceModel
                  If the method is called asynchronously,
                  returns the request thread.

@@ -9,7 +9,6 @@ def print_output(name, output_type):
         print(f"name: {output.name} , value: {output.value} {output.uom}")
     print('')
 
-
 if __name__ == "__main__":
     client = RefineryCalc()
     simulation_id = "10aef717-d138-4a01-b366-2afc8cdf077a"

@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestUnitToggleShutdownStatusResponseModel(unittest.TestCase):
-    """UnitToggleShutdownStatusResponseModel unit examples stubs"""
+    """UnitToggleShutdownStatusResponseModel unit test stubs"""
 
     def setUp(self):
         pass

@@ -30,7 +30,7 @@ class ScheduleSimulationRequestModel(object):
     swagger_types = {
         'time_zone': 'str',
         'cron_expression': 'str',
-        'start_date': 'datetime'
+        'start_date': 'str'
     }
 
     attribute_map = {
@@ -39,7 +39,7 @@ class ScheduleSimulationRequestModel(object):
         'start_date': 'startDate'
     }
 
-    def __init__(self, time_zone=None, cron_expression=None, start_date=None):  # noqa: E501
+    def __init__(self, time_zone=None, cron_expression=None, start_date='yyyy-MM-dd'):  # noqa: E501
         """ScheduleSimulationRequestModel - a model defined in Swagger"""  # noqa: E501
         self._time_zone = None
         self._cron_expression = None
@@ -100,7 +100,7 @@ class ScheduleSimulationRequestModel(object):
 
 
         :return: The start_date of this ScheduleSimulationRequestModel.  # noqa: E501
-        :rtype: datetime
+        :rtype: str
         """
         return self._start_date
 
@@ -110,7 +110,7 @@ class ScheduleSimulationRequestModel(object):
 
 
         :param start_date: The start_date of this ScheduleSimulationRequestModel.  # noqa: E501
-        :type: datetime
+        :type: str
         """
 
         self._start_date = start_date

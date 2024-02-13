@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestTimeSpan(unittest.TestCase):
-    """TimeSpan unit examples stubs"""
+    """TimeSpan unit test stubs"""
 
     def setUp(self):
         pass

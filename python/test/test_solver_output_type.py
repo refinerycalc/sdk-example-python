@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestSolverOutputType(unittest.TestCase):
-    """SolverOutputType unit examples stubs"""
+    """SolverOutputType unit test stubs"""
 
     def setUp(self):
         pass

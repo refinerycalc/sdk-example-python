@@ -27,7 +27,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="Refinery Calc API Documentation",
-    author_email="support@refinerycalc.com.com",
+    author_email="support@refinerycalc.com",
     url="",
     keywords=["Swagger", "Refinery Calc API Documentation"],
     install_requires=REQUIRES,

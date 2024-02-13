@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestRefineriesApi(unittest.TestCase):
-    """RefineriesApi unit examples stubs"""
+    """RefineriesApi unit test stubs"""
 
     def setUp(self):
         self.api = RefineriesApi()  # noqa: E501
@@ -35,17 +35,17 @@ class TestRefineriesApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_refineries_crude_id_get(self):
-        """Test case for v1_refineries_crude_id_get
-
-        Get refinery crude by using refineryCrude id.  # noqa: E501
-        """
-        pass
-
     def test_v1_refineries_get(self):
         """Test case for v1_refineries_get
 
         Get all Refineries by datasource, user can also filter refineries by providing it's name, region and country.  # noqa: E501
+        """
+        pass
+
+    def test_v1_refineries_id_crudes_get(self):
+        """Test case for v1_refineries_id_crudes_get
+
+        Get list of crudes for a particular refinery.  # noqa: E501
         """
         pass
 

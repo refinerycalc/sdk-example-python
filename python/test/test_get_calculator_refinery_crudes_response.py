@@ -20,7 +20,7 @@ from refinerycalc.rest import ApiException
 
 
 class TestGetCalculatorRefineryCrudesResponse(unittest.TestCase):
-    """GetCalculatorRefineryCrudesResponse unit examples stubs"""
+    """GetCalculatorRefineryCrudesResponse unit test stubs"""
 
     def setUp(self):
         pass

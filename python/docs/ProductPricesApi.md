@@ -158,7 +158,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = refinerycalc.ProductPricesApi()
-region_name = 'region_name_example' # str | 
+region_name = 'region_name_example' # str | Region name
 
 try:
     # Get product price by region
@@ -172,7 +172,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **region_name** | **str**|  | 
+ **region_name** | **str**| Region name | 
 
 ### Return type
 

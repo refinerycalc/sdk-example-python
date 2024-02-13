@@ -38,6 +38,7 @@ from refinerycalc.models.data_source import DataSource
 from refinerycalc.models.end_point_mode import EndPointMode
 from refinerycalc.models.end_point_model import EndPointModel
 from refinerycalc.models.end_point_response import EndPointResponse
+from refinerycalc.models.filter_operator import FilterOperator
 from refinerycalc.models.get_calculator_refinery_crudes_response import GetCalculatorRefineryCrudesResponse
 from refinerycalc.models.get_refineries_for_simulation_response import GetRefineriesForSimulationResponse
 from refinerycalc.models.graph import Graph
@@ -88,6 +89,9 @@ from refinerycalc.models.schedule_simulation_request_model import ScheduleSimula
 from refinerycalc.models.simulation_job_options import SimulationJobOptions
 from refinerycalc.models.simulation_rename_request_model import SimulationRenameRequestModel
 from refinerycalc.models.simulation_response import SimulationResponse
+from refinerycalc.models.simulation_schedule_model import SimulationScheduleModel
+from refinerycalc.models.simulation_schedule_response_model import SimulationScheduleResponseModel
+from refinerycalc.models.simulation_schedule_run_model import SimulationScheduleRunModel
 from refinerycalc.models.solver_output_type import SolverOutputType
 from refinerycalc.models.time_series_day import TimeSeriesDay
 from refinerycalc.models.time_span import TimeSpan
@@ -102,3 +106,4 @@ from refinerycalc.models.unit_model import UnitModel
 from refinerycalc.models.unit_toggle_shutdown_status_response_model import UnitToggleShutdownStatusResponseModel
 from refinerycalc.models.update_sim_refinery_crude_allocation_request import UpdateSimRefineryCrudeAllocationRequest
 from refinerycalc.models.update_sim_refinery_crude_prices_request import UpdateSimRefineryCrudePricesRequest
+from refinerycalc.models.user_prices import UserPrices
