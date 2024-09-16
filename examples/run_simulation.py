@@ -1,8 +1,8 @@
-from initialization import RefineryCalc
+from initialization import RefineryCalcExampleClient
 import time
 
 if __name__ == "__main__":
-    client = RefineryCalc()
+    client = RefineryCalcExampleClient()
     simulation_id = "4c696bce-0e0f-4420-abcd-4bab9068c1e7"
     response = client.simulations.v1_simulations_id_run_post(simulation_id)
     if response.success:

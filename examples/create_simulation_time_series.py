@@ -1,12 +1,12 @@
-from python.refinerycalc.models.create_simulation_request import CreateSimulationRequest
-from python.refinerycalc.models.time_series_day import TimeSeriesDay
-from python.refinerycalc.models.timeseries_crudes import TimeseriesCrudes
-from python.refinerycalc.models.timeseries_crude_reference import TimeseriesCrudeReference
-from python.refinerycalc.models.timeseries_product_prices import TimeseriesProductPrices
-from python.refinerycalc.models.timeseries_advanced_options import TimeseriesAdvancedOptions
-from initialization import RefineryCalc
+from refinerycalc.models.create_simulation_request import CreateSimulationRequest
+from refinerycalc.models.time_series_day import TimeSeriesDay
+from refinerycalc.models.timeseries_crudes import TimeseriesCrudes
+from refinerycalc.models.timeseries_crude_reference import TimeseriesCrudeReference
+from refinerycalc.models.timeseries_product_prices import TimeseriesProductPrices
+from refinerycalc.models.timeseries_advanced_options import TimeseriesAdvancedOptions
+from initialization import RefineryCalcExampleClient
 
-client = RefineryCalc()
+client = RefineryCalcExampleClient()
 
 
 def get_product_prices(days: int):
