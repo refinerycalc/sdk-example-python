@@ -1,11 +1,11 @@
-from python.refinerycalc.models.create_simulation_request import CreateSimulationRequest
-from initialization import RefineryCalc
+from refinerycalc.models.create_simulation_request import CreateSimulationRequest
+from initialization import RefineryCalcExampleClient
 
 if __name__ == "__main__":
     # you can get refinery ids with a separate call.
     # hardcoded here for convenience
     refs = [7, 8, 9, 10]
-    client = RefineryCalc()
+    client = RefineryCalcExampleClient()
     req = CreateSimulationRequest()
     req.refineries = refs
     # 0 is default datasource and 1 for IIR
