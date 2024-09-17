@@ -21,10 +21,35 @@ Install the Refinery Calc SDK
 ```
 pip install refinerycalc-api
 ```
-### Initialization
+### Runing the Sample Code
 
 #### Api Key
 Ensure you add your API Key to an Environment Variable `RefineryCalc_Api_Key`
+
+##### Windows Cmd
+```
+set RefineryCalc_Api_Key=<YOUR API KEY HERE>
+```
+
+#### macOS
+```
+export RefineryCalc_Api_Key=<YOUR API KEY HERE>
+```
+
+### Run Sample Code
+#### Create a simulation
+```
+python create_simulation.py
+```
+#### Run the simulation
+use the simulation id from the previous step. Modify the run_simulation.py file to include the simulation id
+and then run the following
+```
+python run_simulation.py
+```
+
+### To Use in Your Own Program
+Add the following code setup where you need it
 
 ```python
 class RefineryCalcExampleClient:

@@ -10,7 +10,7 @@ if __name__ == "__main__":
     req.refineries = refs
     # 0 is default datasource and 1 for IIR
     req.data_source = 0
-    req.name = "my first1 simulation"
+    req.name = "my sample simulation"
     req.is_time_series = False
     response = client.simulations.v1_simulations_post(body=req)
     if response.success:
