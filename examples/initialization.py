@@ -3,6 +3,8 @@ from refinerycalc.api.refineries_api import RefineriesApi
 from refinerycalc.api_client import ApiClient
 from refinerycalc import Configuration
 from refinerycalc.api.product_prices_api import ProductPricesApi
+from refinerycalc.api.crudes_api import CrudesApi
+
 import os
 
 
@@ -33,3 +35,4 @@ class RefineryCalcExampleClient:
         self.simulations = SimulationsApi(self.__apiClient)
         self.refineries = RefineriesApi(self.__apiClient)
         self.productPrices = ProductPricesApi(self.__apiClient)
+        self.crudes = CrudesApi(self.__apiClient)
